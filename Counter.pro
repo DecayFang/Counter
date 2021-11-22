@@ -25,10 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    countercell.cpp \
+    counters.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    countercell.h \
+    counters.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    countercell.ui \
+    counters.ui
+
+RESOURCES += \
+    resources.qrc
