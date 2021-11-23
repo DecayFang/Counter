@@ -24,7 +24,7 @@ public:
     QList<CellData> data() const;
     void setData(const QList<CellData> &data);
 
-    void save();
+    void save(int maxTimeStamp = 100);
 
 private:
     QJsonDocument m_json;

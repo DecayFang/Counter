@@ -49,7 +49,7 @@ void DataCenter::setData(const QList<CellData> &data)
     m_data = data;
 }
 
-void DataCenter::save()
+void DataCenter::save(int maxTimeStamp)
 {
     QString fileName = "data.json";
 
@@ -64,7 +64,11 @@ void DataCenter::save()
         obj["id"] = QJsonValue::fromVariant(i);
         obj["name"] = QJsonValue::fromVariant(m_data[i].name);
         obj["count"] = QJsonValue::fromVariant(m_data[i].count);
-        obj["time"] = QJsonValue::fromVariant(m_data[i].timeStamps);
+        QStringList newTs;
+        const QStringList &ts = m_data[i].timeStamps;
+        for(int i = std::max(0, ts.size() - maxTimeStamp), n = ts.size(); i < n; ++i)
+            newTs.append(ts[i]);
+        obj["time"] = QJsonValue::fromVariant(newTs);
         content.append(obj);
     }
 
