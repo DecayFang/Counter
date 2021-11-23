@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class Counters;
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +19,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    Counters *m_counter;
 };
 
 #endif // MAINWINDOW_H

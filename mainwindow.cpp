@@ -2,22 +2,23 @@
 #include "counters.h"
 #include "ui_mainwindow.h"
 #include <QHBoxLayout>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
+    m_counter(new Counters(this)),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
     QHBoxLayout *cellLayout = new QHBoxLayout(ui->scrollAreaWidgetContents);
-    Counters *counter = new Counters(this);
-    counter->show();
-    cellLayout->addWidget(counter);
+    m_counter->show();
+    cellLayout->addWidget(m_counter);
     ui->scrollAreaWidgetContents->setLayout(cellLayout);
     ui->scrollArea->setWidget(ui->scrollAreaWidgetContents);
 
     connect(ui->AddButton, &QPushButton::clicked, [&]() {
-        counter->addCell();
+        m_counter->addCell();
     });
 }
 

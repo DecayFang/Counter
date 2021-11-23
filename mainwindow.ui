@@ -15,19 +15,10 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="1" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QScrollArea" name="scrollArea">
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
         <property name="widgetResizable">
          <bool>true</bool>
         </property>
@@ -36,8 +27,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>547</width>
-           <height>436</height>
+           <width>549</width>
+           <height>441</height>
           </rect>
          </property>
         </widget>

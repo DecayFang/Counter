@@ -13,7 +13,15 @@ class CounterCell : public QWidget
 
 public:
     explicit CounterCell(QWidget *parent = 0);
+    explicit CounterCell(const QString &name, int count, const QStringList &timeStamps, QWidget *parent = 0);
     ~CounterCell();
+
+    QString name() const;
+    int count() const;
+    QStringList timeStamps() const;
+
+private slots:
+    void _autoStretch();
 
 private:
     Ui::CounterCell *ui;

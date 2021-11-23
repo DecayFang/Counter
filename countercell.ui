@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>148</width>
-    <height>319</height>
+    <width>214</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+   <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -35,7 +35,7 @@
    <property name="spacing">
     <number>0</number>
    </property>
-   <item row="1" column="1" rowspan="2">
+   <item row="2" column="1" rowspan="2">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLineEdit" name="NameLine">
@@ -47,10 +47,13 @@
         </font>
        </property>
        <property name="text">
-        <string>asdkfajsldkfasjdf</string>
+        <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>请输入名字</string>
        </property>
       </widget>
      </item>
@@ -102,31 +105,35 @@
        <property name="styleSheet">
         <string notr="true">QComboBox { margin-bottom: 5px }</string>
        </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
     </layout>
    </item>
    <item row="0" column="0">
-    <widget class="QLabel" name="CloseButton">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
+    <widget class="QPushButton" name="CloseButton">
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap resource="resources.qrc">:/cross.png</pixmap>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/cross.png</normaloff>:/cross.png</iconset>
      </property>
-     <property name="scaledContents">
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="flat">
       <bool>true</bool>
      </property>
     </widget>

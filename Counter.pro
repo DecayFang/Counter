@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     countercell.cpp \
-    counters.cpp
+    counters.cpp \
+    datacenter.cpp
 
 HEADERS += \
         mainwindow.h \
     countercell.h \
-    counters.h
+    counters.h \
+    datacenter.h
 
 FORMS += \
         mainwindow.ui \
